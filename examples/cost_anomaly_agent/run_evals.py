@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Run evals for the cost anomaly agent and print a markdown report."""
+
 from __future__ import annotations
 
 import asyncio
@@ -9,18 +10,20 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
 
+from agent import run_agent
+
 from agent_eval_kit import GoldenSet, run_evals
 from agent_eval_kit.cost_tracker import CostTracker
 from agent_eval_kit.judges.exact_match import ExactMatchJudge
 from agent_eval_kit.reporters.markdown import write_markdown
 
-from agent import run_agent
-
 
 class AnomalyJudge(ExactMatchJudge):
     """Pass when detected anomaly count is within the expected min/max range."""
 
-    async def evaluate(self, expected: dict[str, Any], actual: dict[str, Any]) -> tuple[float, bool, str]:
+    async def evaluate(
+        self, expected: dict[str, Any], actual: dict[str, Any]
+    ) -> tuple[float, bool, str]:
         actual_count = actual.get("anomaly_count", 0)
         min_count = expected.get("anomaly_count_min", 0)
         max_count = expected.get("anomaly_count_max", 99)

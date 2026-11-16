@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate golden_set.jsonl from synthetic data. Run once; commit the output."""
+
 from __future__ import annotations
 
 import json

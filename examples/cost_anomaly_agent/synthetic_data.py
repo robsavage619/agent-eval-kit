@@ -19,7 +19,14 @@ def generate_cur_rows(
 
     services = ["EC2", "S3", "RDS", "Lambda", "CloudFront", "ElastiCache"]
     # Baseline daily spend per service (USD)
-    baseline = {"EC2": 420, "S3": 85, "RDS": 210, "Lambda": 40, "CloudFront": 65, "ElastiCache": 130}
+    baseline = {
+        "EC2": 420,
+        "S3": 85,
+        "RDS": 210,
+        "Lambda": 40,
+        "CloudFront": 65,
+        "ElastiCache": 130,
+    }
 
     rows = []
     start = date(2026, 1, 1)
@@ -29,13 +36,15 @@ def generate_cur_rows(
         for svc in services:
             svc_mult = multiplier if day_offset in anomaly_set else rng.uniform(0.9, 1.1)
             cost = round(baseline[svc] * svc_mult + rng.gauss(0, baseline[svc] * 0.02), 2)
-            rows.append({
-                "date": d.isoformat(),
-                "service": svc,
-                "cost_usd": max(0.0, cost),
-                "usage_quantity": round(cost / rng.uniform(0.01, 0.05), 1),
-                "region": rng.choice(["us-east-1", "us-west-2", "eu-west-1"]),
-            })
+            rows.append(
+                {
+                    "date": d.isoformat(),
+                    "service": svc,
+                    "cost_usd": max(0.0, cost),
+                    "usage_quantity": round(cost / rng.uniform(0.01, 0.05), 1),
+                    "region": rng.choice(["us-east-1", "us-west-2", "eu-west-1"]),
+                }
+            )
     return rows
 
 

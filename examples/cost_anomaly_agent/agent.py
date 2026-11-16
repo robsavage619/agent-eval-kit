@@ -40,7 +40,11 @@ def _compute_stats(state: AnomalyState) -> AnomalyState:
 def _detect_anomalies(state: AnomalyState) -> AnomalyState:
     threshold = state["mean"] + 2.5 * state["std_dev"]
     anomalies = [
-        {"date": d, "cost_usd": v, "z_score": round((v - state["mean"]) / max(state["std_dev"], 0.01), 2)}
+        {
+            "date": d,
+            "cost_usd": v,
+            "z_score": round((v - state["mean"]) / max(state["std_dev"], 0.01), 2),
+        }
         for d, v in state["daily_totals"].items()
         if v > threshold
     ]
@@ -85,16 +89,20 @@ def build_graph(tracker: CostTracker | None = None) -> Any:
     return graph.compile()
 
 
-async def run_agent(input_data: dict[str, Any], tracker: CostTracker | None = None) -> dict[str, Any]:
+async def run_agent(
+    input_data: dict[str, Any], tracker: CostTracker | None = None
+) -> dict[str, Any]:
     graph = build_graph(tracker)
-    result = await graph.ainvoke({
-        "daily_totals": input_data["daily_totals"],
-        "mean": 0.0,
-        "std_dev": 0.0,
-        "anomalies": [],
-        "recommendation": "",
-        "raw_response": "",
-    })
+    result = await graph.ainvoke(
+        {
+            "daily_totals": input_data["daily_totals"],
+            "mean": 0.0,
+            "std_dev": 0.0,
+            "anomalies": [],
+            "recommendation": "",
+            "raw_response": "",
+        }
+    )
     return {
         "anomaly_dates": [a["date"] for a in result["anomalies"]],
         "anomaly_count": len(result["anomalies"]),

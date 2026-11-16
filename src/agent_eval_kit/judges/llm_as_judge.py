@@ -55,7 +55,7 @@ class LLMJudge(Judge):
                 response.usage.input_tokens,
                 response.usage.output_tokens,
             )
-        raw = response.content[0].text.strip()
+        raw = next(b.text for b in response.content if b.type == "text").strip()
         try:
             parsed = json.loads(raw)
             score = float(parsed["score"])
