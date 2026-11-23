@@ -1,0 +1,167 @@
+name: agent-eval-kit
+description: Run a golden-set eval suite, compare it to a baseline without mistaking noise for a regression, and comment the result on the pull request.
+author: Rob Savage
+branding:
+  icon: check-circle
+  color: green
+
+inputs:
+  suite:
+    description: Path to the suite file, optionally with a variable name (evals/evals.py or evals/evals.py:suite).
+    required: true
+  baseline:
+    description: Path to a committed baseline run (JSON from `aek run --out`). Skipped if the file does not exist.
+    required: false
+    default: evals/baseline.json
+  repeats:
+    description: Trials per case. Leave empty to use the suite's own setting. Use 3 or more for anything with a model in the loop.
+    required: false
+    default: ""
+  max-errors:
+    description: Fail if more trials than this errored (agent or judge raised).
+    required: false
+    default: "0"
+  min-pass-rate:
+    description: Optional floor on the pass rate (0 to 1).
+    required: false
+    default: ""
+  gate-on:
+    description: Compare min-pass-rate to the pass rate (point) or its lower 95% bound (lower).
+    required: false
+    default: point
+  strict:
+    description: Fail on any regressed case instead of only on a detectable regression.
+    required: false
+    default: "false"
+  python-version:
+    description: Python version to set up.
+    required: false
+    default: "3.12"
+  install:
+    description: Command that installs your project and its dependencies.
+    required: false
+    default: pip install -e .
+  comment:
+    description: Post (or update) a pull request comment with the report.
+    required: false
+    default: "true"
+
+outputs:
+  verdict:
+    description: regression, improvement, no_detectable_change, or none (no baseline).
+    value: ${{ steps.compare.outputs.verdict }}
+  pass-rate:
+    description: Pass rate of this run.
+    value: ${{ steps.run.outputs.pass_rate }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install
+      shell: bash
+      run: |
+        ${{ inputs.install }}
+        pip install "${{ github.action_path }}"
+
+    - name: Run evals
+      id: run
+      shell: bash
+      env:
+        AEK_SUITE: ${{ inputs.suite }}
+        AEK_REPEATS: ${{ inputs.repeats }}
+        AEK_MIN: ${{ inputs.min-pass-rate }}
+        AEK_GATE_ON: ${{ inputs.gate-on }}
+        AEK_MAX_ERRORS: ${{ inputs.max-errors }}
+      run: |
+        mkdir -p .aek
+        args=(run "$AEK_SUITE" --out .aek/current.json --markdown .aek/run.md --max-errors "$AEK_MAX_ERRORS" -q)
+        if [ -n "$AEK_REPEATS" ]; then args+=(--repeats "$AEK_REPEATS"); fi
+        if [ -n "$AEK_MIN" ]; then args+=(--min-pass-rate "$AEK_MIN" --gate-on "$AEK_GATE_ON"); fi
+        set +e; aek "${args[@]}"; code=$?; set -e
+        echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+        if [ -f .aek/current.json ]; then
+          python -c "import json;print('pass_rate=%.4f' % json.load(open('.aek/current.json'))['pass_rate'])" >> "$GITHUB_OUTPUT"
+        else
+          echo "pass_rate=" >> "$GITHUB_OUTPUT"
+          echo "## agent-eval-kit could not run the suite (exit $code); see the step log." > .aek/run.md
+        fi
+
+    - name: Compare to baseline
+      id: compare
+      if: always()
+      shell: bash
+      env:
+        AEK_BASELINE: ${{ inputs.baseline }}
+        AEK_STRICT: ${{ inputs.strict }}
+      run: |
+        if [ ! -f .aek/current.json ]; then
+          echo "verdict=none" >> "$GITHUB_OUTPUT"
+          echo "exit_code=0" >> "$GITHUB_OUTPUT"
+          cp .aek/run.md .aek/comment.md
+          exit 0
+        fi
+        if [ ! -f "$AEK_BASELINE" ]; then
+          echo "verdict=none" >> "$GITHUB_OUTPUT"
+          echo "exit_code=0" >> "$GITHUB_OUTPUT"
+          cp .aek/run.md .aek/comment.md
+          printf '\n> No baseline at `%s`. Download the `agent-eval-kit-run` artifact from this job and commit its `current.json` there to start comparing.\n' "$AEK_BASELINE" >> .aek/comment.md
+          exit 0
+        fi
+        args=(compare "$AEK_BASELINE" .aek/current.json --markdown .aek/compare.md --json .aek/compare.json -q)
+        if [ "$AEK_STRICT" = "true" ]; then args+=(--strict); fi
+        set +e; aek "${args[@]}"; code=$?; set -e
+        echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+        python -c "import json;print('verdict=' + json.load(open('.aek/compare.json'))['verdict'])" >> "$GITHUB_OUTPUT"
+        { cat .aek/compare.md; echo; echo "<details><summary>Full run</summary>"; echo; cat .aek/run.md; echo "</details>"; } > .aek/comment.md
+
+    - name: Job summary
+      if: always()
+      shell: bash
+      run: |
+        if [ -f .aek/comment.md ]; then cat .aek/comment.md >> "$GITHUB_STEP_SUMMARY"; fi
+
+    - name: Upload run
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: agent-eval-kit-run
+        path: .aek/
+        if-no-files-found: ignore
+
+    - name: Comment on pull request
+      # Never let the comment decide the job: fork PRs get a read-only token.
+      if: always() && inputs.comment == 'true' && github.event_name == 'pull_request'
+      continue-on-error: true
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+        PR: ${{ github.event.pull_request.number }}
+        REPO: ${{ github.repository }}
+      run: |
+        [ -f .aek/comment.md ] || exit 0
+        marker='<!-- agent-eval-kit -->'
+        report="$(head -c 60000 .aek/comment.md)"
+        if [ "$(wc -c < .aek/comment.md)" -gt 60000 ]; then
+          report="$report"$'\n\n'"_Report truncated; the full version is in the job summary._"
+        fi
+        body="$marker"$'\n'"$report"
+        id=$(gh api "repos/$REPO/issues/$PR/comments" --paginate \
+          --jq ".[] | select(.body | startswith(\"$marker\")) | .id" | head -n1)
+        if [ -n "$id" ]; then
+          gh api -X PATCH "repos/$REPO/issues/comments/$id" -f body="$body" > /dev/null
+        else
+          gh api -X POST "repos/$REPO/issues/$PR/comments" -f body="$body" > /dev/null
+        fi
+
+    - name: Gate
+      if: always()
+      shell: bash
+      run: |
+        if [ "${{ steps.run.outputs.exit_code }}" != "0" ] || [ "${{ steps.compare.outputs.exit_code }}" != "0" ]; then
+          echo "::error::agent-eval-kit gate failed (see the job summary)"
+          exit 1
+        fi

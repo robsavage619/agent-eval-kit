@@ -1,8 +1,14 @@
+"""Case-level diff between two runs (the 0.1 API).
+
+Every flipped case counts. For a verdict that accounts for flaky cases and
+small golden sets, use ``compare_runs`` in ``agent_eval_kit.compare``.
+"""
+
 from __future__ import annotations
 
 from pydantic import BaseModel
 
-from .harness import EvalResult, EvalRun
+from .harness import EvalRun
 
 
 class Regression(BaseModel):
@@ -27,29 +33,26 @@ class RegressionReport(BaseModel):
 
 
 def diff_runs(baseline: EvalRun, current: EvalRun) -> RegressionReport:
-    base_map: dict[str, EvalResult] = {r.case_id: r for r in baseline.results}
-    curr_map: dict[str, EvalResult] = {r.case_id: r for r in current.results}
-
+    base_map = {c.case_id: c for c in baseline.cases}
     regressions: list[Regression] = []
     improvements: list[Regression] = []
     unchanged = 0
 
-    for case_id, curr in curr_map.items():
-        base = base_map.get(case_id)
+    for curr in current.cases:
+        base = base_map.get(curr.case_id)
         if base is None:
             continue
-        delta = curr.score - base.score
         rec = Regression(
-            case_id=case_id,
-            baseline_passed=base.passed,
-            current_passed=curr.passed,
-            baseline_score=base.score,
-            current_score=curr.score,
-            delta=delta,
+            case_id=curr.case_id,
+            baseline_passed=base.passing,
+            current_passed=curr.passing,
+            baseline_score=base.mean_score,
+            current_score=curr.mean_score,
+            delta=curr.mean_score - base.mean_score,
         )
-        if base.passed and not curr.passed:
+        if base.passing and not curr.passing:
             regressions.append(rec)
-        elif not base.passed and curr.passed:
+        elif not base.passing and curr.passing:
             improvements.append(rec)
         else:
             unchanged += 1

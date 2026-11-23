@@ -1,0 +1,5927 @@
+{
+  "results": [
+    {
+      "case_id": "refund_double_charge",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "A1001"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "A1001"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "A1001"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.018229000033898046,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_double_charge",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "A1001"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "A1001"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "A1001"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.01643100017645338,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_double_charge",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "A1001"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "A1001"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "A1001"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.0071230001594813075,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_double_charge",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "A1001"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "A1001"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "A1001"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.0057810000271274475,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_double_charge",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "A1001"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "A1001"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "A1001"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.005323000095813768,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_broken_item",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "B2207"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "B2207"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "B2207"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.006130999963716022,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_broken_item",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "B2207"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "B2207"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "B2207"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004792000027009635,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_broken_item",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "B2207"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "B2207"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "B2207"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004963000037605525,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_broken_item",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "B2207"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "B2207"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "B2207"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.0045670001327380305,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_broken_item",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "B2207"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "B2207"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "B2207"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004354999873612542,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_mid",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "C3310"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "C3310"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "C3310"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.005794000117020914,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_mid",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "C3310"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "C3310"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "C3310"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004935999868393992,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_mid",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "C3310"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "C3310"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "C3310"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004405999789014459,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_mid",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "C3310"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "C3310"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "C3310"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004254999794284231,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_mid",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "C3310"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "C3310"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "C3310"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004280999974071165,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_question",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "D4402"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "D4402"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "D4402"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.0056799999583745375,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_question",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "D4402"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "D4402"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "D4402"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004791000037585036,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_question",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "D4402"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "D4402"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "D4402"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.003940999931728584,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_question",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "D4402"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "D4402"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "D4402"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004144000058659003,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_question",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "D4402"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "D4402"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "D4402"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.003918999937013723,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_screen",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "E5501"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.006584999937331304,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_screen",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "E5501"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004642000021704007,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_screen",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "E5501"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004042999989906093,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_screen",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "E5501"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003964999905292643,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_screen",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "E5501"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004487000069275382,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_laptop",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "F6602"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0058859998262050794,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_laptop",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "F6602"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004610999894794077,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_laptop",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "F6602"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004265000143277575,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_laptop",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "F6602"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003853000180242816,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_laptop",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "F6602"
+            }
+          },
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "large refund"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003933000016331789,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_duplicate",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "V2114"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "V2114"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "V2114"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.0051530000746424776,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_duplicate",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "V2114"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "V2114"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "V2114"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004136999905313132,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_duplicate",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "V2114"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "V2114"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "V2114"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004402999820740661,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_duplicate",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "V2114"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "V2114"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "V2114"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004666999984692666,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_duplicate",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "V2114"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "V2114"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "V2114"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004558000000542961,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_cable",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "Y2417"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "Y2417"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "Y2417"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.005485999963639188,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_cable",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "Y2417"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "Y2417"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "Y2417"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004135000153837609,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_cable",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "Y2417"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "Y2417"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "Y2417"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.003982000180258183,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_cable",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "Y2417"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "Y2417"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "Y2417"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004482999884203309,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_cable",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "Y2417"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "Y2417"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "Y2417"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.00422600010097085,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_plain",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "X2316"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "X2316"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "X2316"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.0056650001170055475,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_plain",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "X2316"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "X2316"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "X2316"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.0044929997784493025,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_plain",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "X2316"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "X2316"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "X2316"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004128999989916338,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_plain",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "X2316"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "X2316"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "X2316"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004092999915883411,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_plain",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "X2316"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "X2316"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "X2316"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004020999995191232,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_where",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "G7701"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "G7701"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.005794000117020914,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_where",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "G7701"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "G7701"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.005118999979458749,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_where",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "G7701"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "G7701"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004011999862996163,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_where",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "G7701"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "G7701"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.003651000042736996,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_where",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "G7701"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "G7701"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0037150000480323797,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_late",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "H8802"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "H8802"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004806000106327701,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_late",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "H8802"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "H8802"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0051920001169492025,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_late",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "H8802"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "H8802"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004389999958220869,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_late",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "H8802"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "H8802"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004303999958210625,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_late",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "H8802"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "H8802"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.003468999921096838,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "J9903"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "J9903"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004988999990018783,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "J9903"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "J9903"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004248000095685711,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "J9903"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "J9903"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0042729998313006945,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "J9903"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "J9903"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0041420000798098044,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "J9903"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "J9903"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.005873999953109887,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_plain",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "K1104"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "K1104"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.005360999921322218,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_plain",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "K1104"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "K1104"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004735999937111046,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_plain",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "K1104"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "K1104"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004195999963485519,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_plain",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "K1104"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "K1104"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004173999968770659,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_plain",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "K1104"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "K1104"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0037359998259489657,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking_please",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "W2215"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "W2215"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.005093000027045491,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking_please",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "W2215"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "W2215"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004510000053414842,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking_please",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "W2215"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "W2215"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004020999995191232,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking_please",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "W2215"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "W2215"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0037610000163113,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking_please",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "W2215"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "W2215"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0038160001167852897,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_plain",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.00413999987358693,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_plain",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0032770001325843623,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_plain",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003212000137864379,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_plain",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0032929999633779516,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_plain",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "L1205"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0031740000849822536,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_wrong_size",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003561000085028354,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_wrong_size",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003277999894635286,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_wrong_size",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.002897999820561381,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_wrong_size",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0024250000478787115,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_wrong_size",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "M1306"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0026379998416814487,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_not_refund",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0040970001009554835,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_not_refund",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.023825999960536137,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_not_refund",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003648000074463198,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_not_refund",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003687999878820847,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_not_refund",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "N1407"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003369000069142203,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_either",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004235999995216844,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_either",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004526000111582107,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_either",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0030250000691012247,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_either",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003001000095537165,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_either",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "P1508"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003114000037385267,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_manager",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004542999931800296,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_manager",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.003859999878841336,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_manager",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0033409999105060706,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_manager",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0031299998681788566,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_manager",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0028300000849412754,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_complaint",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0038610000956396107,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_complaint",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.002750000021478627,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_complaint",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.003053999989788281,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_complaint",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.002618999815240386,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_complaint",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0031019999369163997,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_lawyer",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.002770999799395213,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_lawyer",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0028389999897626694,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_lawyer",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0026309999157092534,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_lawyer",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.00262900016423373,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_lawyer",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "escalate",
+        "trajectory": {
+          "required": [
+            "escalate_to_human"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.002770999799395213,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_tracking",
+      "trial": 0,
+      "passed": false,
+      "score": 0.16666666666666666,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "R1710"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "R1710"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.012004000154774985,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='order_status' actual='refund'; required in_order [lookup_order -> get_tracking], got [lookup_order -> issue_refund]; forbidden tools called: issue_refund",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_tracking",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "R1710"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "R1710"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0049629998102318496,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_tracking",
+      "trial": 2,
+      "passed": false,
+      "score": 0.3333333333333333,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.006397999868568149,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='order_status' actual='escalate'; required in_order [lookup_order -> get_tracking], got [escalate_to_human]",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_tracking",
+      "trial": 3,
+      "passed": false,
+      "score": 0.3333333333333333,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.005246999990049517,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='order_status' actual='escalate'; required in_order [lookup_order -> get_tracking], got [escalate_to_human]",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_tracking",
+      "trial": 4,
+      "passed": false,
+      "score": 0.3333333333333333,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.005396000005930546,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='order_status' actual='escalate'; required in_order [lookup_order -> get_tracking], got [escalate_to_human]",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_refund",
+      "trial": 0,
+      "passed": false,
+      "score": 0.3333333333333333,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "S1811"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "S1811"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "S1811"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.005856000143467099,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='refund' actual='order_status'; required in_order [lookup_order -> issue_refund], got [lookup_order -> get_tracking]",
+      "error": null,
+      "tags": [
+        "refund",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_refund",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "S1811"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "S1811"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "S1811"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.004472999989957316,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_refund",
+      "trial": 2,
+      "passed": false,
+      "score": 0.3333333333333333,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "S1811"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "S1811"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "S1811"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.005221000037636259,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='refund' actual='order_status'; required in_order [lookup_order -> issue_refund], got [lookup_order -> get_tracking]",
+      "error": null,
+      "tags": [
+        "refund",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_refund",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "S1811"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "S1811"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "S1811"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.00413400016441301,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "refund",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_refund",
+      "trial": 4,
+      "passed": false,
+      "score": 0.16666666666666666,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "refund",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            {
+              "tool": "issue_refund",
+              "args": {
+                "order_id": "S1811"
+              }
+            }
+          ],
+          "forbidden": [
+            "cancel_order",
+            "escalate_to_human"
+          ]
+        }
+      },
+      "latency_ms": 0.005315000180416973,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='refund' actual='escalate'; required in_order [lookup_order -> issue_refund], got [escalate_to_human]; forbidden tools called: escalate_to_human",
+      "error": null,
+      "tags": [
+        "refund",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_where",
+      "trial": 0,
+      "passed": false,
+      "score": 0.16666666666666666,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "T1912"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "T1912"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.005913999984841212,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='order_status' actual='refund'; required in_order [lookup_order -> get_tracking], got [lookup_order -> issue_refund]; forbidden tools called: issue_refund",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_where",
+      "trial": 1,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "T1912"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "T1912"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004935999868393992,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_where",
+      "trial": 2,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "T1912"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "T1912"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0038919999951758655,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_where",
+      "trial": 3,
+      "passed": false,
+      "score": 0.3333333333333333,
+      "actual": {
+        "intent": "escalate",
+        "trajectory": [
+          {
+            "tool": "escalate_to_human",
+            "args": {
+              "reason": "triage"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.004440999873622786,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='order_status' actual='escalate'; required in_order [lookup_order -> get_tracking], got [escalate_to_human]",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_where",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "order_status",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "T1912"
+            }
+          },
+          {
+            "tool": "get_tracking",
+            "args": {
+              "order_id": "T1912"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "order_status",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "get_tracking"
+          ],
+          "forbidden": [
+            "issue_refund",
+            "cancel_order"
+          ]
+        }
+      },
+      "latency_ms": 0.0041509999846311985,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_cancel",
+      "trial": 0,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "U2013"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "U2013"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.0041480000163574005,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_cancel",
+      "trial": 1,
+      "passed": false,
+      "score": 0.16666666666666666,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "U2013"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "U2013"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004830999841942685,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='cancel' actual='refund'; required in_order [lookup_order -> cancel_order], got [lookup_order -> issue_refund]; forbidden tools called: issue_refund",
+      "error": null,
+      "tags": [
+        "cancel",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_cancel",
+      "trial": 2,
+      "passed": false,
+      "score": 0.16666666666666666,
+      "actual": {
+        "intent": "refund",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "U2013"
+            }
+          },
+          {
+            "tool": "issue_refund",
+            "args": {
+              "order_id": "U2013"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.004480000143303187,
+      "cost_usd": 0.0,
+      "judge_reason": "intent: expected='cancel' actual='refund'; required in_order [lookup_order -> cancel_order], got [lookup_order -> issue_refund]; forbidden tools called: issue_refund",
+      "error": null,
+      "tags": [
+        "cancel",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_cancel",
+      "trial": 3,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "U2013"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "U2013"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.00869200016495597,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_cancel",
+      "trial": 4,
+      "passed": true,
+      "score": 1.0,
+      "actual": {
+        "intent": "cancel",
+        "trajectory": [
+          {
+            "tool": "lookup_order",
+            "args": {
+              "order_id": "U2013"
+            }
+          },
+          {
+            "tool": "cancel_order",
+            "args": {
+              "order_id": "U2013"
+            }
+          }
+        ]
+      },
+      "expected": {
+        "intent": "cancel",
+        "trajectory": {
+          "required": [
+            "lookup_order",
+            "cancel_order"
+          ],
+          "forbidden": [
+            "issue_refund"
+          ]
+        }
+      },
+      "latency_ms": 0.003358999947522534,
+      "cost_usd": 0.0,
+      "judge_reason": "all judges passed",
+      "error": null,
+      "tags": [
+        "cancel",
+        "ambiguous"
+      ],
+      "cluster": null
+    }
+  ],
+  "total_cost_usd": 0.0,
+  "pass_rate": 0.912,
+  "mean_score": 0.9346666666666666,
+  "mean_latency_ms": 0.004737063994980417,
+  "name": "support-agent v1",
+  "created_at": "2026-11-23T01:00:44+00:00",
+  "repeats": 5,
+  "cases": [
+    {
+      "case_id": "refund_double_charge",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_broken_item",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_mid",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_question",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_screen",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_large_laptop",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_duplicate",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_cable",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "refund_small_plain",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "refund"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_where",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_late",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_plain",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "status_tracking_please",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "status"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_plain",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_wrong_size",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_not_refund",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "cancel",
+        "critical"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "cancel_either",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "cancel"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_manager",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_complaint",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "escalate_lawyer",
+      "trials": 5,
+      "passes": 5,
+      "mean_score": 1.0,
+      "errors": 0,
+      "score_variance": 0.0,
+      "tags": [
+        "escalate"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_tracking",
+      "trials": 5,
+      "passes": 1,
+      "mean_score": 0.4333333333333333,
+      "errors": 0,
+      "score_variance": 0.10555555555555554,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_refund",
+      "trials": 5,
+      "passes": 2,
+      "mean_score": 0.5666666666666667,
+      "errors": 0,
+      "score_variance": 0.16111111111111112,
+      "tags": [
+        "refund",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_where",
+      "trials": 5,
+      "passes": 3,
+      "mean_score": 0.7,
+      "errors": 0,
+      "score_variance": 0.17222222222222222,
+      "tags": [
+        "status",
+        "ambiguous"
+      ],
+      "cluster": null
+    },
+    {
+      "case_id": "ambiguous_cancel",
+      "trials": 5,
+      "passes": 3,
+      "mean_score": 0.6666666666666667,
+      "errors": 0,
+      "score_variance": 0.20833333333333334,
+      "tags": [
+        "cancel",
+        "ambiguous"
+      ],
+      "cluster": null
+    }
+  ],
+  "pass_rate_ci": [
+    0.8240000000000001,
+    0.9840000000000001
+  ],
+  "ci_method": "bootstrap",
+  "stderr": 0.04332820482472512,
+  "clustered_stderr": null,
+  "n_clusters": null,
+  "n_errors": 0,
+  "spec": {
+    "dataset": "d0db6e66b00e",
+    "judge": "2b8eefa9474f",
+    "judge_config": {
+      "judge": "AllOf",
+      "config": {
+        "judges": [
+          {
+            "judge": "ExactMatchJudge",
+            "config": {
+              "keys": [
+                "intent"
+              ]
+            }
+          },
+          {
+            "judge": "TrajectoryJudge",
+            "config": {
+              "key": "trajectory",
+              "order": "in_order",
+              "max_steps": null,
+              "max_repeats": 2,
+              "args": "subset",
+              "arg_overrides": {},
+              "match": "_Matcher"
+            }
+          }
+        ]
+      }
+    },
+    "git_sha": "",
+    "kit_version": "0.2.0"
+  }
+}

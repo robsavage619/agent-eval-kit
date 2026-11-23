@@ -1,0 +1,23 @@
+name: Evals
+
+# Dogfood: run the support-agent demo through this repo's own Action, compare
+# it to the committed baseline, and comment the report on the pull request.
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          suite: examples/support_agent/evals.py
+          baseline: examples/support_agent/baseline.json
+          repeats: "5"
+          install: pip install -e .
