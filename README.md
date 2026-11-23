@@ -230,6 +230,10 @@ None of the statistics here is new. The point of the kit is to make them the def
 - **The pricing table in `cost_tracker.py` is hand-maintained.** Check it against your provider, or pass your own with `CostTracker(pricing=...)`.
 - **Bias checks for pairwise judges (position, verbosity, self-preference) are not built in.** If your judge comes from the same model family as your agent, calibrate it with extra care.
 
+## How this was built
+
+I built this with Claude Code. I chose the statistics, the design rule (a result has to say how far to trust itself), and what the demo should show. Claude wrote most of the code and prose, and the commit trailers say so. Tests, ruff, and pyright run in CI with no API key. An independent review pass found real bugs before the 0.2.0 release, such as errors being counted as failures, and they were fixed. The numbers in this README come from the included example in `examples/support_agent`, so you can reproduce them.
+
 ## Development
 
 ```bash
