@@ -1,0 +1,40 @@
+{"id": "good_01", "expected": {"keywords": ["refund", "A1001"]}, "actual": {"reply": "Your refund for order A1001 is on its way and should land in 3 to 5 days."}, "human_passed": true, "notes": ""}
+{"id": "good_02", "expected": {"keywords": ["refund", "B2207"]}, "actual": {"reply": "I've issued a refund for B2207. Sorry it arrived broken."}, "human_passed": true, "notes": ""}
+{"id": "good_03", "expected": {"keywords": ["refund", "C3310"]}, "actual": {"reply": "Refund processed for order C3310; you'll see it on your statement soon."}, "human_passed": true, "notes": ""}
+{"id": "good_04", "expected": {"keywords": ["refund", "D4402"]}, "actual": {"reply": "Done. A full refund for D4402 is heading back to your card."}, "human_passed": true, "notes": ""}
+{"id": "good_05", "expected": {"keywords": ["refund", "V2114"]}, "actual": {"reply": "You were charged twice on V2114, so I've refunded the duplicate charge."}, "human_passed": true, "notes": ""}
+{"id": "good_06", "expected": {"keywords": ["refund", "Y2417"]}, "actual": {"reply": "Refund issued for Y2417. No need to send the cable back."}, "human_passed": true, "notes": ""}
+{"id": "good_07", "expected": {"keywords": ["refund", "X2316"]}, "actual": {"reply": "I've started your refund for X2316 today."}, "human_passed": true, "notes": ""}
+{"id": "good_08", "expected": {"keywords": ["refund", "S1811"]}, "actual": {"reply": "Refund for S1811 is complete."}, "human_passed": true, "notes": ""}
+{"id": "good_09", "expected": {"keywords": ["refund", "G2001"]}, "actual": {"reply": "Your refund on G2001 went through this morning."}, "human_passed": true, "notes": ""}
+{"id": "good_10", "expected": {"keywords": ["refund", "H2002"]}, "actual": {"reply": "Refund confirmed for H2002, about 3 business days."}, "human_passed": true, "notes": ""}
+{"id": "good_11", "expected": {"keywords": ["refund", "J2003"]}, "actual": {"reply": "We've processed the refund for J2003."}, "human_passed": true, "notes": ""}
+{"id": "good_12", "expected": {"keywords": ["refund", "K2004"]}, "actual": {"reply": "A refund for K2004 has been sent to your original payment method."}, "human_passed": true, "notes": ""}
+{"id": "good_13", "expected": {"keywords": ["refund", "L2005"]}, "actual": {"reply": "Refund approved for L2005. Thanks for your patience."}, "human_passed": true, "notes": ""}
+{"id": "good_14", "expected": {"keywords": ["refund", "M2006"]}, "actual": {"reply": "I issued the refund for M2006 and emailed you a receipt."}, "human_passed": true, "notes": ""}
+{"id": "good_15", "expected": {"keywords": ["refund", "N2007"]}, "actual": {"reply": "Your refund for N2007 is processing now."}, "human_passed": true, "notes": ""}
+{"id": "good_16", "expected": {"keywords": ["refund", "P2008"]}, "actual": {"reply": "Refund for order P2008 is done."}, "human_passed": true, "notes": ""}
+{"id": "good_17", "expected": {"keywords": ["refund", "Q2009"]}, "actual": {"reply": "All set, the refund for Q2009 is on its way."}, "human_passed": true, "notes": ""}
+{"id": "good_18", "expected": {"keywords": ["refund", "R2010"]}, "actual": {"reply": "Refunded order R2010 in full."}, "human_passed": true, "notes": ""}
+{"id": "good_19", "expected": {"keywords": ["refund", "T2011"]}, "actual": {"reply": "I've refunded T2011; you'll get a confirmation email."}, "human_passed": true, "notes": ""}
+{"id": "good_20", "expected": {"keywords": ["refund", "U2012"]}, "actual": {"reply": "The refund for U2012 went out today."}, "human_passed": true, "notes": ""}
+{"id": "looks_ok_01", "expected": {"keywords": ["refund", "A3001"]}, "actual": {"reply": "We are unable to refund order A3001 because it is outside the return window."}, "human_passed": false, "notes": "refuses the refund"}
+{"id": "looks_ok_02", "expected": {"keywords": ["refund", "B3002"]}, "actual": {"reply": "Refund for B3002? I'd need a manager to look at that first."}, "human_passed": false, "notes": "promises nothing"}
+{"id": "looks_ok_03", "expected": {"keywords": ["refund", "C3003"]}, "actual": {"reply": "Unfortunately order C3003 is not eligible for a refund."}, "human_passed": false, "notes": "refuses the refund"}
+{"id": "looks_ok_04", "expected": {"keywords": ["refund", "D3004"]}, "actual": {"reply": "I can't process a refund for D3004 through chat, please call us."}, "human_passed": false, "notes": "pushes the customer elsewhere"}
+{"id": "looks_ok_05", "expected": {"keywords": ["refund", "E3005"]}, "actual": {"reply": "A refund for E3005 was already issued last month, so there's nothing more to do."}, "human_passed": false, "notes": "wrong: the customer was charged again"}
+{"id": "looks_ok_06", "expected": {"keywords": ["refund", "F3006"]}, "actual": {"reply": "Refund for F3006 issued for $5 of the $50 you paid."}, "human_passed": false, "notes": "partial refund presented as done"}
+{"id": "looks_ok_07", "expected": {"keywords": ["refund", "G3007"]}, "actual": {"reply": "Before I refund G3007 can you confirm your password?"}, "human_passed": false, "notes": "asks for a password"}
+{"id": "looks_ok_08", "expected": {"keywords": ["refund", "H3008"]}, "actual": {"reply": "Refund policy for H3008: items must be unused. Have a nice day!"}, "human_passed": false, "notes": "answers a different question"}
+{"id": "paraphrase_01", "expected": {"keywords": ["refund", "J4001"]}, "actual": {"reply": "The $89 for J4001 is back on your card; it should show in a few days."}, "human_passed": true, "notes": "says it without the word refund"}
+{"id": "paraphrase_02", "expected": {"keywords": ["refund", "K4002"]}, "actual": {"reply": "Order K4002: I've reversed the charge, you'll see the credit shortly."}, "human_passed": true, "notes": "says it without the word refund"}
+{"id": "paraphrase_03", "expected": {"keywords": ["refund", "L4003"]}, "actual": {"reply": "Money for L4003 has been returned to your account."}, "human_passed": true, "notes": "says it without the word refund"}
+{"id": "paraphrase_04", "expected": {"keywords": ["refund", "M4004"]}, "actual": {"reply": "I've credited your card for M4004 in full."}, "human_passed": true, "notes": "says it without the word refund"}
+{"id": "bad_01", "expected": {"keywords": ["refund", "N5001"]}, "actual": {"reply": "Thanks for reaching out! Is there anything else I can help with?"}, "human_passed": false, "notes": ""}
+{"id": "bad_02", "expected": {"keywords": ["refund", "P5002"]}, "actual": {"reply": "Your order P5002 has shipped."}, "human_passed": false, "notes": ""}
+{"id": "bad_03", "expected": {"keywords": ["refund", "Q5003"]}, "actual": {"reply": "I have escalated your request."}, "human_passed": false, "notes": ""}
+{"id": "bad_04", "expected": {"keywords": ["refund", "R5004"]}, "actual": {"reply": "Please allow 24 hours for a response."}, "human_passed": false, "notes": ""}
+{"id": "bad_05", "expected": {"keywords": ["refund", "S5005"]}, "actual": {"reply": "Order S5005 is in our system."}, "human_passed": false, "notes": ""}
+{"id": "bad_06", "expected": {"keywords": ["refund", "T5006"]}, "actual": {"reply": "Sorry to hear that. Can you describe the issue?"}, "human_passed": false, "notes": ""}
+{"id": "bad_07", "expected": {"keywords": ["refund", "U5007"]}, "actual": {"reply": "Hi! I'm a virtual assistant."}, "human_passed": false, "notes": ""}
+{"id": "bad_08", "expected": {"keywords": ["refund", "V5008"]}, "actual": {"reply": "We value your business."}, "human_passed": false, "notes": ""}

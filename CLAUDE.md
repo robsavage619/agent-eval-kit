@@ -2,36 +2,39 @@
 
 Rob's global conventions (`~/.claude/CLAUDE.md`) apply; this file is the project overlay.
 
-A small Python package (`agent_eval_kit`, 0.1.0) for running golden-set evals against LangGraph/Claude agents: load cases from JSONL, run the agent concurrently, score with a judge, report, and diff two runs for regressions. Public GitHub repo (`robsavage619/agent-eval-kit`); users are developers wiring it into their own CI.
+A Python package (`agent_eval_kit`, 0.2.0) and CLI (`aek`) for golden-set evals of LLM agents that report how far to trust their own numbers: confidence intervals, repeated trials with pass^k / pass@k, noise-aware run comparison (exact McNemar, critical-case gating, minimum detectable effect), judge calibration against human labels, and trajectory (tool-call) evals. Public GitHub repo (`robsavage619/agent-eval-kit`); users are developers wiring it into their own CI. The repo root is also a composite GitHub Action (`action.yml`).
 
 ## Commands
 
-Baseline 2026-11-15, run from the repo root with `.venv/bin/<tool>` (the Makefile wraps the same commands in `uv run`; `make` itself was not run). The venv is Python 3.13.13 although the project targets 3.12.
-
-- Tests: `.venv/bin/pytest -q` -> 9 passed, 0.24s, no API key needed.
-- Lint: `.venv/bin/ruff check --no-cache src/ tests/ examples/` -> 1 error today (I001 import order in `examples/cost_anomaly_agent/run_evals.py`, auto-fixable).
-- Format: `.venv/bin/ruff format --no-cache --check src/ tests/ examples/` -> 4 files in `examples/cost_anomaly_agent/` would be reformatted.
-- Types: `.venv/bin/pyright src/` -> 11 errors today, all `.text` access on non-text content blocks at `src/agent_eval_kit/judges/llm_as_judge.py:58`.
-- So CI's lint and typecheck steps fail on the current tree; fixing is not part of unrelated work.
-- Not run: `make cost-anomaly` and the NL-to-SQL example (need `ANTHROPIC_API_KEY`, paid calls; the latter also needs a downloaded Chinook DB).
+- Tests: `uv run pytest -q` (offline, no API key).
+- Lint: `uv run ruff check src/ tests/ examples/` and `uv run ruff format --check src/ tests/ examples/`.
+- Types: `uv run pyright src/`.
+- Demo (no API key): `uv run aek run examples/support_agent/evals.py --repeats 5`, `...evals.py:suite_v2`, `aek compare examples/support_agent/baseline.json <run.json>`, `aek calibrate examples/support_agent/evals.py:reply_suite examples/support_agent/labels.jsonl`.
+- README chart: `python scripts/make_figures.py` regenerates `docs/assets/reliability.svg` from `examples/support_agent/baseline.json`.
+- Not run in CI: `make cost-anomaly` and the NL-to-SQL example (need `ANTHROPIC_API_KEY`, paid calls; NL-to-SQL also needs the Chinook DB).
 
 ## Layout
 
-- `src/agent_eval_kit/harness.py`: `run_evals()` and `EvalRun`; `golden_set.py`: JSONL cases; `regression.py`: `diff_runs()`; `cost_tracker.py`: per-case cost and the model pricing table.
-- `src/agent_eval_kit/judges/`: `ExactMatchJudge`, `NumericToleranceJudge`, `LLMJudge` (Claude Haiku), shared `base.py`.
-- `src/agent_eval_kit/reporters/`: `markdown.py`, `junit.py`.
-- `tests/test_harness.py`: the only test file.
-- `examples/`: `cost_anomaly_agent/` (synthetic data, 20 cases) and `nl_to_sql_agent/` (10 cases); not part of the wheel.
-- `docs/why-eval.md`: rationale essay. `README.md` is the user-facing reference.
+- `src/agent_eval_kit/stats.py`: Wilson, exact McNemar, bootstrap, kappa, pass^k / pass@k, clustered SE, power. Every function has a reference-value test in `tests/test_stats.py`.
+- `harness.py`: `run_evals()` (repeats, per-case cost scope, agent/judge errors captured), `EvalRun`, `CaseSummary`, `RunSpec`.
+- `compare.py`: `compare_runs()` and `min_flips()`; `regression.py`: the 0.1 `diff_runs()`, kept for compatibility.
+- `calibration.py`: `calibrate_judge()`, `load_labels()`.
+- `trajectory.py`: `TrajectoryJudge`, `extract_tool_calls()`, `Step`.
+- `judges/`: `ExactMatchJudge`, `NumericToleranceJudge`, `LLMJudge`, `AllOf`/`AnyOf`/`Not`/`Weighted`; `base.py` holds `describe()`/`fingerprint()`.
+- `reporters/`: markdown (run, comparison, calibration) and JUnit.
+- `suite.py`: `Suite` and `load_suite("path.py:var")`; `cli.py`: `aek run|compare|calibrate|power|report`.
+- `examples/support_agent/`: offline demo (simulated agent, v1 and v2, 25 cases, 40 labels, committed `baseline.json`). `examples/cost_anomaly_agent/` and `nl_to_sql_agent/` call real models.
+- `docs/methods.md`: every formula and threshold, with references. Keep it in sync with `stats.py`, `compare.py`, `calibration.py`.
 
 ## Load-bearing rules
 
-- Config lives in `pyproject.toml`: ruff line length 100, rules E/F/I/UP/B/SIM with E501 ignored, pyright basic, pytest `asyncio_mode = "auto"`.
-- CI (`.github/workflows/ci.yml`) runs lint, `pyright src/`, and `pytest` on pushes and PRs to `main`; keep local checks identical to those commands.
-- Judge cost ordering (README, "Judge selection guide"): prefer exact-match or numeric-tolerance judges, use `LLMJudge` only for free-text output.
-- README says to update the pricing table in `cost_tracker.py` as models change; it is hand-maintained.
-- Do not call the Anthropic API from tests; the current tests are offline.
+- Statistics are computed on per-case summaries, never pooled trials. Do not change that without updating `docs/methods.md`.
+- `pydantic` is the only runtime dependency; `anthropic` is the `llm` extra and is imported lazily in `LLMJudge`.
+- `LLMJudge` computes pass/fail from the score in code and raises `JudgeError` on unparseable replies; never turn that back into a silent 0.
+- Regenerate `examples/support_agent/baseline.json` and the README chart whenever demo behaviour or report format changes, and update the README numbers to match real output.
+- Do not call the Anthropic API from tests.
+- Prose (README, docs) follows Rob's human-voice rules: no em dashes, no hype words.
 
 ## Git
 
-Conventional commits (`feat:`, `docs:` in the log). Commit to the current default branch (`main`). Ask before pushing.
+Conventional commits. Work on a branch and ask before pushing.

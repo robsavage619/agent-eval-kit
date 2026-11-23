@@ -32,5 +32,8 @@ jobs:
 
       - name: Test
         run: uv run pytest
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: CLI smoke test
+        run: |
+          uv run aek run examples/support_agent/evals.py --repeats 5 --out current.json -q
+          uv run aek compare examples/support_agent/baseline.json current.json -q
